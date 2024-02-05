@@ -10,7 +10,7 @@
   @preconcurrency import OSLog
   import XCTestDynamicOverlay
 
-  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, visionOS 1.0,   *)
   extension DependencyValues {
     /// A value for writing interpolated string messages to the unified logging system.
     public var logger: Logger {
@@ -19,7 +19,7 @@
     }
   }
 
-  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, visionOS 1.0, *)
   extension Logger: DependencyKey {
     public static var liveValue: Logger { Logger() }
     /// - Note: It doesn't make a lot of sense to fail by default because we can't pass an
@@ -37,7 +37,7 @@
     }
   }
 
-  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+  @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, visionOS 1.0, *)
   extension Logger {
     /// Creates a logger using the specified subsystem and category.
     ///
@@ -64,7 +64,7 @@
     }
   }
 
-  @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, *)
+  @available(macOS 12.0, iOS 15.0, watchOS 8.0, tvOS 15.0, visionOS 1.0, *)
   extension Logger {
     /// Creates a `OSSignposter` to emit signpost to this logger value.
     public var signpost: OSSignposter {
